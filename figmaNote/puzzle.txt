@@ -1,0 +1,355 @@
+/* Puzzle */
+
+position: relative;
+width: 411px;
+height: 731px;
+
+background: #FFFFFF;
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 89px;
+height: 89px;
+left: 161px;
+top: 642px;
+
+background: #2C2C2C;
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 411px;
+height: 67px;
+left: 0px;
+top: 664px;
+
+background: #2C2C2C;
+
+
+/* mdi:puzzle */
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 182px;
+top: 658px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 4.17%;
+top: 4.17%;
+bottom: 8.33%;
+
+background: #E6E6E6;
+
+
+/* pepicons-pop:triangle-left-filled */
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 20px;
+top: 674px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 20.01%;
+right: 20%;
+top: 16.16%;
+bottom: 16.15%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20.01%;
+right: 20%;
+top: 16.16%;
+bottom: 16.15%;
+
+background: #E6E6E6;
+
+
+/* Vector */
+
+position: absolute;
+left: 20.01%;
+right: 20%;
+top: 16.16%;
+bottom: 16.15%;
+
+background: #E6E6E6;
+
+
+/* pepicons-pencil:triangle-right-filled */
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 343px;
+top: 674px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 20%;
+right: 20.01%;
+top: 16.15%;
+bottom: 16.16%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20%;
+right: 20.01%;
+top: 16.15%;
+bottom: 16.16%;
+
+background: #E6E6E6;
+
+
+/* Vector */
+
+position: absolute;
+left: 20%;
+right: 20.01%;
+top: 16.15%;
+bottom: 16.16%;
+
+background: #E6E6E6;
+
+
+/* PuRe */
+
+position: absolute;
+width: 42px;
+height: 25px;
+left: 185px;
+top: 709px;
+
+/* Single Line/Body Base
+
+Used for any text element where you need 100% line height. For example, an input field, a label.
+*/
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+/* or 16px */
+
+color: #FFFFFF;
+
+
+
+/* Group 1 */
+
+position: absolute;
+width: 394px;
+height: 462px;
+left: 9px;
+top: 112px;
+
+
+
+/* Rectangle 3 */
+
+position: absolute;
+width: 394px;
+height: 462px;
+left: 9px;
+top: 112px;
+
+background: #D9D9D9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 220px;
+height: 40px;
+left: 96px;
+top: 127px;
+
+background: #2C2C2C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: 20px;
+top: 180px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 8 */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: 147px;
+top: 180px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 9 */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: 274px;
+top: 180px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 10 */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: 20px;
+top: 308px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 11 */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: 147px;
+top: 308px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: 274px;
+top: 308px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 13 */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: 19px;
+top: 436px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 14 */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: 146px;
+top: 436px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 15 */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: 273px;
+top: 436px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Solve the puzzle ! */
+
+position: absolute;
+width: 194px;
+height: 32px;
+left: 109px;
+top: 131px;
+
+/* M3/headline/small-emphasized */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Subtitle */
+
+position: absolute;
+width: 298px;
+height: 38px;
+left: 58px;
+top: 36px;
+
+/* Subtitle */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #757575;

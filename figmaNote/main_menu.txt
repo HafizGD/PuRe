@@ -1,0 +1,480 @@
+/* Main menu */
+
+position: relative;
+width: 411px;
+height: 731px;
+
+background: #FFFFFF;
+
+
+/* Rectangle 3 */
+
+position: absolute;
+width: 394px;
+height: 325px;
+left: 9px;
+top: 355px;
+
+background: #D9D9D9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 220px;
+height: 40px;
+left: 20px;
+top: 370px;
+
+background: #2C2C2C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 5 */
+
+position: absolute;
+width: 378px;
+height: 93px;
+left: 18px;
+top: 537px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 89px;
+height: 89px;
+left: 161px;
+top: 642px;
+
+background: #2C2C2C;
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 411px;
+height: 67px;
+left: 0px;
+top: 664px;
+
+background: #2C2C2C;
+
+
+/* mdi:puzzle */
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 182px;
+top: 658px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 4.17%;
+top: 4.17%;
+bottom: 8.33%;
+
+background: #E6E6E6;
+
+
+/* fluent:list-bar-24-filled */
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 346px;
+top: 674px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #E6E6E6;
+
+
+/* pepicons-pop:triangle-left-filled */
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 20px;
+top: 674px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 20.01%;
+right: 20%;
+top: 16.16%;
+bottom: 16.15%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20.01%;
+right: 20%;
+top: 16.16%;
+bottom: 16.15%;
+
+background: #E6E6E6;
+
+
+/* Vector */
+
+position: absolute;
+left: 20.01%;
+right: 20%;
+top: 16.16%;
+bottom: 16.15%;
+
+background: #E6E6E6;
+
+
+/* PuRe */
+
+position: absolute;
+width: 42px;
+height: 25px;
+left: 185px;
+top: 709px;
+
+/* Single Line/Body Base
+
+Used for any text element where you need 100% line height. For example, an input field, a label.
+*/
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+/* or 16px */
+
+color: #FFFFFF;
+
+
+
+/* Rectangle 2 */
+
+position: absolute;
+width: 394px;
+height: 122px;
+left: 9px;
+top: 205px;
+
+background: #D9D9D9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Rectangle 6 */
+
+position: absolute;
+width: 364px;
+height: 35px;
+left: 24px;
+top: 269px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Trending News */
+
+position: absolute;
+width: 194px;
+height: 32px;
+left: 30px;
+top: 374px;
+
+/* M3/headline/small-emphasized */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Want to know more? */
+
+position: absolute;
+width: 271px;
+height: 44px;
+left: 30px;
+top: 225px;
+
+/* M3/headline/medium-emphasized */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 36px;
+/* or 129% */
+
+color: #1E1E1E;
+
+
+
+/* material-symbols:image */
+
+position: absolute;
+width: 70px;
+height: 70px;
+left: 30px;
+top: 549px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #2C2C2C;
+
+
+/* Lorem ipsum dolor sit amet astaganaga */
+
+position: absolute;
+width: 213px;
+height: 52px;
+left: 117px;
+top: 558px;
+
+/* M3/title/medium-emphasized */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+letter-spacing: 0.15px;
+
+color: #1E1E1E;
+
+
+
+/* Group 5 */
+
+position: absolute;
+width: 378px;
+height: 93px;
+left: 18px;
+top: 427px;
+
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 378px;
+height: 93px;
+left: 18px;
+top: 427px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Kantin PENS Menjadi Pusat Perhatian */
+
+position: absolute;
+width: 213px;
+height: 52px;
+left: 117px;
+top: 448px;
+
+/* M3/title/medium-emphasized */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+letter-spacing: 0.15px;
+
+color: #1E1E1E;
+
+
+
+/* material-symbols:image */
+
+position: absolute;
+width: 70px;
+height: 70px;
+left: 30px;
+top: 439px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #2C2C2C;
+
+
+/* material-symbols:bookmark-outline */
+
+position: absolute;
+width: 31px;
+height: 31px;
+left: 351px;
+top: 478px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #2C2C2C;
+
+
+/* material-symbols:bookmark-outline */
+
+position: absolute;
+width: 31px;
+height: 31px;
+left: 352px;
+top: 588px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #2C2C2C;
+
+
+/* streamline-sharp:magnifying-glass */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 358px;
+top: 275px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.33%;
+
+border: 1.5px solid #1E1E1E;
+
+
+/* Text Content Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 296px;
+height: 132px;
+left: 30px;
+top: 30px;
+
+
+
+/* Title */
+
+width: 296px;
+height: 86px;
+
+/* Title Hero */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 72px;
+line-height: 120%;
+/* or 86px */
+letter-spacing: -0.03em;
+
+color: #1E1E1E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Subtitle */
+
+width: 296px;
+height: 38px;
+
+/* Subtitle */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #757575;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;

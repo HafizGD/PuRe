@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray">
+
+    <LinearLayout
+        android:id="@+id/heroActions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/textContentTitle"
+            android:layout_width="296dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="160dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="296dp"
+                android:layout_height="wrap_content"
+                android:text="PuRe"
+                android:textSize="72sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="-0.03"
+                android:gravity="center"
+                android:lineSpacingExtra="0sp"
+                android:lineSpacingMultiplier="1.2" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="296dp"
+                android:layout_height="wrap_content"
+                android:text="Subtitle"
+                android:textSize="32sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="0sp"
+                android:lineSpacingMultiplier="1.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonGroup"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:padding="0dp"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:dividerPadding="16dp">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Button"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/button_gray_background"
+                android:padding="12dp"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Button"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_dark_background"
+                android:padding="12dp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

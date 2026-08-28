@@ -1,0 +1,47 @@
+public class MainActivity2 extends AppCompatActivity {
+
+    private TextView tvTitle2, tvDescription2;
+    private ImageView imageNews;
+    private Button btnGoToQuiz;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+
+        // Inisialisasi view
+        tvTitle2 = findViewById(R.id.tvTitle2);
+        tvDescription2 = findViewById(R.id.tvDescription2);
+        imageNews = findViewById(R.id.imageNews);
+        btnGoToQuiz = findViewById(R.id.btnGoToQuiz);
+
+        // Ambil data dari Intent
+        String title = getIntent().getStringExtra("title");
+        String description = getIntent().getStringExtra("description");
+        String imageUrl = getIntent().getStringExtra("imageUrl");
+
+        // Set judul
+        tvTitle2.setText(title);
+
+        // Set deskripsi
+        if (description != null && !description.isEmpty()) {
+            tvDescription2.setText(description);
+        } else {
+            tvDescription2.setText("Tidak ada deskripsi berita.");
+        }
+
+        // Load gambar berita
+        Glide.with(this)
+                .load(imageUrl)
+                .centerCrop()
+                .into(imageNews);
+
+        // Aksi tombol "Kerjakan Quiz"
+        btnGoToQuiz.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+            intent.putExtra("description", description);
+            intent.putExtra("imageUrl", imageUrl);
+            startActivity(intent);
+        });
+    }
+}

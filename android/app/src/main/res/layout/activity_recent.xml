@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigationBar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_small">
+
+            <!-- Header Info -->
+            <RelativeLayout
+                android:id="@+id/headerInfo"
+                android:layout_width="112dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:alpha="0.8">
+
+                <TextView
+                    android:id="@+id/headerTitle"
+                    android:layout_width="94dp"
+                    android:layout_height="13dp"
+                    android:text="Title"
+                    android:textSize="11sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.5" />
+
+                <TextView
+                    android:id="@+id/headerSubtitle"
+                    android:layout_width="112dp"
+                    android:layout_height="13dp"
+                    android:layout_below="@id/headerTitle"
+                    android:text="Subtitle"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.4" />
+            </RelativeLayout>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="365dp"
+                android:layout_height="wrap_content"
+                android:text="Recent Opened News"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="-0.02"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="34dp"
+                android:lineSpacingExtra="0sp"
+                android:lineSpacingMultiplier="1.2" />
+
+            <!-- Recent News List Container -->
+            <RelativeLayout
+                android:layout_width="394dp"
+                android:layout_height="400dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_background"
+                android:elevation="@dimen/card_elevation">
+
+                <!-- Recent Item 1 -->
+                <RelativeLayout
+                    android:layout_width="378dp"
+                    android:layout_height="93dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="26dp"
+                    android:background="@drawable/white_card_background"
+                    android:elevation="@dimen/card_elevation">
+
+                    <ImageView
+                        android:id="@+id/newsImage1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/dark_gray"
+                        android:contentDescription="News image" />
+
+                    <TextView
+                        android:id="@+id/newsTitle1"
+                        android:layout_width="213dp"
+                        android:layout_height="wrap_content"
+                        android:text="Kantin PENS Menjadi Pusat Perhatian"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_toEndOf="@id/newsImage1"
+                        android:layout_marginStart="17dp"
+                        android:layout_centerVertical="true"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+
+                    <ImageView
+                        android:id="@+id/bookmarkIcon1"
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="27dp"
+                        android:src="@android:drawable/star_big_off"
+                        android:tint="@color/dark_gray"
+                        android:contentDescription="Bookmark" />
+                </RelativeLayout>
+
+                <!-- Recent Item 2 -->
+                <RelativeLayout
+                    android:layout_width="378dp"
+                    android:layout_height="93dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="126dp"
+                    android:background="@drawable/white_card_background"
+                    android:elevation="@dimen/card_elevation">
+
+                    <ImageView
+                        android:id="@+id/newsImage2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/dark_gray"
+                        android:contentDescription="News image" />
+
+                    <TextView
+                        android:id="@+id/newsTitle2"
+                        android:layout_width="213dp"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum dolor sit amet aoaoa"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_toEndOf="@id/newsImage2"
+                        android:layout_marginStart="17dp"
+                        android:layout_centerVertical="true"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+
+                    <ImageView
+                        android:id="@+id/bookmarkIcon2"
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="27dp"
+                        android:src="@android:drawable/star_big_off"
+                        android:tint="@color/dark_gray"
+                        android:contentDescription="Bookmark" />
+                </RelativeLayout>
+
+                <!-- Recent Item 3 -->
+                <RelativeLayout
+                    android:layout_width="378dp"
+                    android:layout_height="93dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="226dp"
+                    android:background="@drawable/white_card_background"
+                    android:elevation="@dimen/card_elevation">
+
+                    <ImageView
+                        android:id="@+id/newsImage3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/dark_gray"
+                        android:contentDescription="News image" />
+
+                    <TextView
+                        android:id="@+id/newsTitle3"
+                        android:layout_width="213dp"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum dolor sit amet aaooaa"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_toEndOf="@id/newsImage3"
+                        android:layout_marginStart="17dp"
+                        android:layout_centerVertical="true"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+
+                    <ImageView
+                        android:id="@+id/bookmarkIcon3"
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="27dp"
+                        android:src="@android:drawable/star_big_off"
+                        android:tint="@color/dark_gray"
+                        android:contentDescription="Bookmark" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/bottom_navigation_bar" />
+
+</RelativeLayout>
+

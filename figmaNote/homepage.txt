@@ -1,0 +1,272 @@
+/* Homepage */
+
+position: relative;
+width: 411px;
+height: 731px;
+
+background: #FFFFFF;
+
+
+/* Hero Actions */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 160px 24px;
+gap: 32px;
+
+position: absolute;
+width: 411px;
+height: 731px;
+left: 0px;
+top: 0px;
+
+background: #F5F5F5;
+
+
+/* Text Content Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 296px;
+height: 132px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Title */
+
+width: 296px;
+height: 86px;
+
+/* Title Hero */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 72px;
+line-height: 120%;
+/* or 86px */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #1E1E1E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Subtitle */
+
+width: 296px;
+height: 38px;
+
+/* Subtitle */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #757575;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Button Group */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+position: absolute;
+width: 240px;
+height: 40px;
+left: 86px;
+top: 479px;
+
+
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px;
+gap: 8px;
+
+width: 112px;
+height: 40px;
+
+background: #E3E3E3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Star
+
+Keywords: bookmark, favorite, like
+*/
+
+display: none;
+width: 16px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Button */
+
+width: 50px;
+height: 16px;
+
+/* Single Line/Body Base
+
+Used for any text element where you need 100% line height. For example, an input field, a label.
+*/
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+/* identical to box height, or 16px */
+
+color: #1E1E1E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X
+
+Keywords: cancel, close, delete, remove, times, clear
+*/
+
+display: none;
+width: 16px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px;
+gap: 8px;
+
+width: 112px;
+height: 40px;
+
+background: #2C2C2C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Star
+
+Keywords: bookmark, favorite, like
+*/
+
+display: none;
+width: 16px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Button */
+
+width: 45px;
+height: 16px;
+
+/* Single Line/Body Base
+
+Used for any text element where you need 100% line height. For example, an input field, a label.
+*/
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+/* identical to box height, or 16px */
+
+color: #F5F5F5;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X
+
+Keywords: cancel, close, delete, remove, times, clear
+*/
+
+display: none;
+width: 16px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;

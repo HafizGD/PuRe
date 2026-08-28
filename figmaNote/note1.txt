@@ -1,0 +1,326 @@
+public class MainActivity extends AppCompatActivity {
+
+    private TextView tvNamaArt;
+    private GridLayout puzzleGrid;
+    private String imageUrlGlobal;
+    private String descriptionGlobal;
+    private Button buttonSkip;
+    private FloatingActionButton resetButton;
+
+    // Puzzle variables
+    private List<FrameLayout> puzzlePieces = new ArrayList<>();
+    private List<Integer> correctOrder = new ArrayList<>();
+    private List<Integer> puzzleState = new ArrayList<>();
+    private int rows = 3, cols = 3;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        tvNamaArt = findViewById(R.id.namaArt);
+        puzzleGrid = findViewById(R.id.puzzleGrid);
+        buttonSkip = findViewById(R.id.buttonSkip);
+        resetButton = findViewById(R.id.resetButton);
+
+        fetchNewsImage();
+
+        buttonSkip.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            intent.putExtra("title", tvNamaArt.getText().toString());
+            intent.putExtra("description", descriptionGlobal);
+            intent.putExtra("imageUrl", imageUrlGlobal);
+            startActivity(intent);
+        });
+
+        resetButton.setOnClickListener(v -> {
+            Glide.get(getApplicationContext()).clearMemory();
+            new Thread(() -> Glide.get(getApplicationContext()).clearDiskCache()).start();
+
+            // Ambil berita acak baru dari API
+            fetchNewsImage();
+        });
+    }
+
+    private void fetchNewsImage() {
+        OkHttpClient client = new OkHttpClient();
+
+        // ✅ URL diubah untuk mencari daftar berita, bukan 1 artikel spesifik
+        String requestUrl = "https://api.worldnewsapi.com/search-news?source-countries=id&number=50";
+
+        Request request = new Request.Builder()
+                .url(requestUrl)
+                .addHeader("x-api-key", "d77b07cbb1d44ce39c2a19c614e63ccf") // Pakai header API key Anda
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                runOnUiThread(() ->
+                        Toast.makeText(MainActivity.this, "Gagal ambil berita", Toast.LENGTH_SHORT).show()
+                );
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                if (!response.isSuccessful()) {
+                    runOnUiThread(() ->
+                            Toast.makeText(MainActivity.this, "Response gagal: " + response.code(), Toast.LENGTH_SHORT).show()
+                    );
+                    return;
+                }
+
+                // Pastikan response body tidak null sebelum diproses
+                if (response.body() == null) {
+                    runOnUiThread(() -> Toast.makeText(MainActivity.this, "Response body kosong", Toast.LENGTH_SHORT).show());
+                    return;
+                }
+
+                final String body = response.body().string();
+                android.util.Log.d("NEWS_API", body);
+
+                try {
+                    JSONObject obj = new JSONObject(body);
+                    JSONArray newsArray = obj.getJSONArray("news"); // 1. Ambil array berita
+
+                    if (newsArray.length() > 0) {
+                        JSONObject randomArticle = null;
+                        String imageUrl = "";
+                        int maxTries = 10; // Batas percobaan untuk mencari artikel dengan gambar
+                        int tries = 0;
+
+                        // 2. Loop untuk mencari artikel acak yang punya gambar
+                        while ((imageUrl.isEmpty() || imageUrl.equals("null")) && tries < maxTries && tries < newsArray.length()) {
+                            int randomIndex = new Random().nextInt(newsArray.length());
+                            randomArticle = newsArray.getJSONObject(randomIndex);
+                            imageUrl = randomArticle.optString("image", "");
+                            tries++;
+                        }
+
+                        // 3. Jika artikel dengan gambar ditemukan
+                        if (randomArticle != null && !imageUrl.isEmpty() && !imageUrl.equals("null")) {
+                            imageUrlGlobal = imageUrl;
+                            descriptionGlobal = randomArticle.optString("text", "Deskripsi tidak tersedia.");
+                            final String title = randomArticle.optString("title", "Judul Tidak Tersedia");
+
+                            runOnUiThread(() -> tvNamaArt.setText(title));
+
+                            Glide.with(MainActivity.this)
+                                    .asBitmap()
+                                    .load(imageUrlGlobal)
+                                    .into(new CustomTarget<Bitmap>() {
+                                        @Override
+                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                            Bitmap squareBitmap = cropToSquare(resource);
+                                            createPuzzle(squareBitmap);
+                                        }
+
+                                        @Override
+                                        public void onLoadCleared(@Nullable Drawable placeholder) { }
+                                    });
+                        } else {
+                            runOnUiThread(() ->
+                                    Toast.makeText(MainActivity.this, "Gagal menemukan berita dengan gambar", Toast.LENGTH_SHORT).show()
+                            );
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    runOnUiThread(() ->
+                            Toast.makeText(MainActivity.this, "Error parsing JSON", Toast.LENGTH_SHORT).show()
+                    );
+                }
+            }
+        });
+    }
+
+
+    private Bitmap cropToSquare(Bitmap src) {
+        int width = src.getWidth();
+        int height = src.getHeight();
+        int newSize = Math.min(width, height);
+
+        int xOffset = (width - newSize) / 2;
+        int yOffset = (height - newSize) / 2;
+
+        return Bitmap.createBitmap(src, xOffset, yOffset, newSize, newSize);
+    }
+
+    private void createPuzzle(Bitmap bitmap) {
+        int pieceWidth = bitmap.getWidth() / cols;
+        int pieceHeight = bitmap.getHeight() / rows;
+
+        runOnUiThread(() -> {
+            puzzleGrid.removeAllViews();
+            puzzlePieces.clear();
+            puzzleState.clear();
+            correctOrder.clear();
+
+            for (int row = 0; row < rows; row++) {
+                for (int col = 0; col < cols; col++) {
+                    int index = row * cols + col;
+
+                    if (index < rows * cols - 1) {
+                        Bitmap piece = Bitmap.createBitmap(bitmap,
+                                col * pieceWidth,
+                                row * pieceHeight,
+                                pieceWidth,
+                                pieceHeight);
+
+                        FrameLayout frame = new FrameLayout(MainActivity.this);
+
+                        ImageView imageView = new ImageView(MainActivity.this);
+                        imageView.setImageBitmap(piece);
+                        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                        FrameLayout.LayoutParams imgParams = new FrameLayout.LayoutParams(
+                                FrameLayout.LayoutParams.MATCH_PARENT,
+                                FrameLayout.LayoutParams.MATCH_PARENT
+                        );
+                        imageView.setLayoutParams(imgParams);
+
+                        TextView numberHint = new TextView(MainActivity.this);
+                        numberHint.setText(String.valueOf(index + 1));
+                        numberHint.setTextSize(14f);
+                        numberHint.setTextColor(Color.WHITE);
+                        numberHint.setBackgroundColor(Color.parseColor("#66000000"));
+                        numberHint.setPadding(6, 2, 6, 2);
+
+                        FrameLayout.LayoutParams numParams = new FrameLayout.LayoutParams(
+                                FrameLayout.LayoutParams.WRAP_CONTENT,
+                                FrameLayout.LayoutParams.WRAP_CONTENT
+                        );
+                        numParams.gravity = Gravity.TOP | Gravity.START;
+                        numberHint.setLayoutParams(numParams);
+
+                        frame.addView(imageView);
+                        frame.addView(numberHint);
+
+                        puzzlePieces.add(frame);
+                        correctOrder.add(index + 1);
+                        puzzleState.add(index + 1);
+                    } else {
+                        puzzlePieces.add(null);
+                        correctOrder.add(0);
+                        puzzleState.add(0);
+                    }
+                }
+            }
+
+            puzzleState = generateSolvablePuzzleState();
+            drawPuzzle();
+        });
+    }
+
+    private void drawPuzzle() {
+        puzzleGrid.removeAllViews();
+
+        int gridSize = Math.min(puzzleGrid.getWidth(), puzzleGrid.getHeight());
+        if (gridSize == 0) { // Tambahkan pengecekan jika grid belum di-layout
+            puzzleGrid.post(this::drawPuzzle); // Coba lagi setelah layout selesai
+            return;
+        }
+        int cellSize = gridSize / cols;
+
+        for (int i = 0; i < puzzleState.size(); i++) {
+            int value = puzzleState.get(i);
+
+            GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+            params.width = cellSize;
+            params.height = cellSize;
+            params.rowSpec = GridLayout.spec(i / cols);
+            params.columnSpec = GridLayout.spec(i % cols);
+
+            if (value != 0) {
+                // Hapus piece dari parent sebelumnya jika ada
+                FrameLayout piece = puzzlePieces.get(value - 1);
+                if (piece.getParent() != null) {
+                    ((GridLayout) piece.getParent()).removeView(piece);
+                }
+                piece.setLayoutParams(params);
+                puzzleGrid.addView(piece);
+
+                final int index = i;
+                piece.setOnClickListener(v -> movePiece(index));
+            } else {
+                TextView emptyView = new TextView(this);
+                emptyView.setLayoutParams(params);
+                puzzleGrid.addView(emptyView);
+            }
+        }
+    }
+
+    private List<Integer> generateSolvablePuzzleState() {
+        List<Integer> state = new ArrayList<>();
+        int total = rows * cols;
+        for (int i = 1; i < total; i++) {
+            state.add(i);
+        }
+        state.add(0);
+
+        Random random = new Random();
+        int emptyIndex = state.indexOf(0);
+
+        int shuffleMoves = Math.max(100, total * 50);
+        int lastEmptyIndex = -1;
+        for (int m = 0; m < shuffleMoves; m++) {
+            List<Integer> neighbors = getAdjacentIndices(emptyIndex);
+            if (neighbors.size() > 1 && lastEmptyIndex != -1) {
+                neighbors.remove(Integer.valueOf(lastEmptyIndex));
+            }
+            int targetIndex = neighbors.get(random.nextInt(neighbors.size()));
+            Collections.swap(state, emptyIndex, targetIndex);
+            lastEmptyIndex = emptyIndex;
+            emptyIndex = targetIndex;
+        }
+
+        if (isSolved(state)) {
+            List<Integer> neighbors = getAdjacentIndices(emptyIndex);
+            int targetIndex = neighbors.get(random.nextInt(neighbors.size()));
+            Collections.swap(state, emptyIndex, targetIndex);
+        }
+
+        return state;
+    }
+
+    private boolean isSolved(List<Integer> state) {
+        if (state.size() != rows * cols) return false;
+        for (int i = 0; i < state.size() - 1; i++) {
+            if (state.get(i) != i + 1) return false;
+        }
+        return state.get(state.size() - 1) == 0;
+    }
+
+    private List<Integer> getAdjacentIndices(int index) {
+        List<Integer> result = new ArrayList<>();
+        int r = index / cols;
+        int c = index % cols;
+        if (r > 0) result.add((r - 1) * cols + c);
+        if (r < rows - 1) result.add((r + 1) * cols + c);
+        if (c > 0) result.add(r * cols + (c - 1));
+        if (c < cols - 1) result.add(r * cols + (c + 1));
+        return result;
+    }
+
+    private void movePiece(int index) {
+        int emptyIndex = puzzleState.indexOf(0);
+
+        if (isAdjacent(index, emptyIndex)) {
+            Collections.swap(puzzleState, index, emptyIndex);
+            drawPuzzle();
+
+            if (puzzleState.equals(correctOrder)) {
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                intent.putExtra("title", tvNamaArt.getText().toString());
+                intent.putExtra("description", descriptionGlobal);
+                intent.putExtra("imageUrl", imageUrlGlobal);
+                startActivity(intent);
+            }
+        }
+    }
+
+    private boolean isAdjacent(int i, int j) {
+        int rowI = i / cols, colI = i % cols;
+        int rowJ = j / cols, colJ = j % cols;
+        return (Math.abs(rowI - rowJ) + Math.abs(colI - colJ)) == 1;
+    }
+}

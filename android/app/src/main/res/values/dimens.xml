@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="margin_small">9dp</dimen>
+    <dimen name="margin_medium">18dp</dimen>
+    <dimen name="margin_large">30dp</dimen>
+    <dimen name="corner_radius">10dp</dimen>
+    <dimen name="corner_radius_small">8dp</dimen>
+    <dimen name="bottom_nav_height">67dp</dimen>
+    <dimen name="bottom_nav_icon_size">48dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+</resources>
+

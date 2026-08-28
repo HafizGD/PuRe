@@ -1,0 +1,460 @@
+/* Bookmarks */
+
+position: relative;
+width: 411px;
+height: 731px;
+
+background: #FFFFFF;
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 89px;
+height: 89px;
+left: 161px;
+top: 642px;
+
+background: #2C2C2C;
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 411px;
+height: 67px;
+left: 0px;
+top: 664px;
+
+background: #2C2C2C;
+
+
+/* mdi:puzzle */
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 182px;
+top: 658px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 4.17%;
+top: 4.17%;
+bottom: 8.33%;
+
+background: #E6E6E6;
+
+
+/* fluent:list-bar-24-filled */
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 346px;
+top: 674px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #E6E6E6;
+
+
+/* pepicons-pop:triangle-left-filled */
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 20px;
+top: 674px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 20.01%;
+right: 20%;
+top: 16.16%;
+bottom: 16.15%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20.01%;
+right: 20%;
+top: 16.16%;
+bottom: 16.15%;
+
+background: #E6E6E6;
+
+
+/* Vector */
+
+position: absolute;
+left: 20.01%;
+right: 20%;
+top: 16.16%;
+bottom: 16.15%;
+
+background: #E6E6E6;
+
+
+/* PuRe */
+
+position: absolute;
+width: 42px;
+height: 25px;
+left: 185px;
+top: 709px;
+
+/* Single Line/Body Base
+
+Used for any text element where you need 100% line height. For example, an input field, a label.
+*/
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+/* or 16px */
+
+color: #FFFFFF;
+
+
+
+/* Group 4 */
+
+position: absolute;
+width: 112px;
+height: 26px;
+left: 16px;
+top: 14px;
+
+opacity: 0.8;
+
+
+/* Subtitle */
+
+position: absolute;
+width: 112px;
+height: 13px;
+left: 16px;
+top: 27px;
+
+/* M3/body/small
+
+0.4
+*/
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.4px;
+
+color: #757575;
+
+
+
+/* Title */
+
+position: absolute;
+width: 94px;
+height: 13px;
+left: 16px;
+top: 14px;
+
+/* M3/label/small */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 16px;
+/* or 145% */
+letter-spacing: 0.5px;
+
+color: #1E1E1E;
+
+
+
+/* Rectangle 8 */
+
+position: absolute;
+width: 394px;
+height: 400px;
+left: 9px;
+top: 193px;
+
+background: #D9D9D9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Title */
+
+position: absolute;
+width: 267px;
+height: 60px;
+left: 16px;
+top: 87px;
+
+/* Title Page */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 120%;
+/* or 58px */
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+
+color: #1E1E1E;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* Group 6 */
+
+position: absolute;
+width: 378px;
+height: 93px;
+left: 17px;
+top: 219px;
+
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 378px;
+height: 93px;
+left: 17px;
+top: 219px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Vector */
+
+position: absolute;
+left: 9.18%;
+right: 78.04%;
+top: 32.8%;
+bottom: 60.02%;
+
+background: #2C2C2C;
+
+
+/* Kantin PENS Menjadi Pusat Perhatian */
+
+position: absolute;
+width: 213px;
+height: 52px;
+left: 116px;
+top: 240px;
+
+/* M3/title/medium-emphasized */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+letter-spacing: 0.15px;
+
+color: #1E1E1E;
+
+
+
+/* material-symbols:bookmark */
+
+position: absolute;
+width: 31px;
+height: 31px;
+left: 350px;
+top: 270px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #2C2C2C;
+
+
+/* Group 7 */
+
+position: absolute;
+width: 378px;
+height: 93px;
+left: 17px;
+top: 345px;
+
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 378px;
+height: 93px;
+left: 17px;
+top: 345px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Vector */
+
+position: absolute;
+left: 9.18%;
+right: 78.04%;
+top: 50.03%;
+bottom: 42.78%;
+
+background: #2C2C2C;
+
+
+/* Lorem ipsum dolor sit amet astaganaga */
+
+position: absolute;
+width: 213px;
+height: 52px;
+left: 116px;
+top: 366px;
+
+/* M3/title/medium-emphasized */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+letter-spacing: 0.15px;
+
+color: #1E1E1E;
+
+
+
+/* material-symbols:bookmark */
+
+position: absolute;
+width: 31px;
+height: 31px;
+left: 350px;
+top: 396px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #2C2C2C;
+
+
+/* Group 8 */
+
+position: absolute;
+width: 378px;
+height: 93px;
+left: 17px;
+top: 473px;
+
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 378px;
+height: 93px;
+left: 17px;
+top: 473px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+
+/* Vector */
+
+position: absolute;
+left: 9.18%;
+right: 78.04%;
+top: 67.54%;
+bottom: 25.27%;
+
+background: #2C2C2C;
+
+
+/* Lorem ipsum dolor sit amet astagadragon */
+
+position: absolute;
+width: 213px;
+height: 52px;
+left: 116px;
+top: 494px;
+
+/* M3/title/medium-emphasized */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+letter-spacing: 0.15px;
+
+color: #1E1E1E;
+
+
+
+/* material-symbols:bookmark */
+
+position: absolute;
+width: 31px;
+height: 31px;
+left: 350px;
+top: 524px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #2C2C2C;
